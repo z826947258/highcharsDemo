@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.domain.Point;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,36 +16,22 @@ import java.util.List;
 public class DataController {
 	@RequestMapping(value = "getData")
 	@ResponseBody
-	public List<List<Double>> getData() {
+	public List<Point> getData() {
 		//TODO:介入动态数据
 		//现在造假数据
-		List<List<Double>> dataList = new ArrayList<List<Double>>();
+		List<Point> dataList = new ArrayList<Point>();
 
-		List<Double> list1 = new ArrayList<Double>();
-		list1.add(161.2);
-		list1.add(51.6);
+		Point point1 = new Point(1.0, 2.0 , "p1");
+		Point point2 = new Point(1.0, 1.0 , "p1");
+		Point point3 = new Point(2.0, 2.0 , "p1");
+		Point point4 = new Point(3.0, 2.0 , "p1");
+		Point point5 = new Point(4.0, 4.0 , "p1");
 
-		List<Double> list2 = new ArrayList<Double>();
-		list2.add(167.5);
-		list2.add(59.0);
-
-		List<Double> list3 = new ArrayList<Double>();
-		list3.add(159.5);
-		list3.add(49.2);
-
-		List<Double> list4 = new ArrayList<Double>();
-		list4.add(157.0);
-		list4.add(63.0);
-
-		List<Double> list5 = new ArrayList<Double>();
-		list5.add(155.8);
-		list5.add(53.6);
-
-		dataList.add(list1);
-		dataList.add(list2);
-		dataList.add(list3);
-		dataList.add(list4);
-		dataList.add(list5);
+		dataList.add(point1);
+		dataList.add(point2);
+		dataList.add(point3);
+		dataList.add(point4);
+		dataList.add(point5);
 
 		return dataList;
 	}
