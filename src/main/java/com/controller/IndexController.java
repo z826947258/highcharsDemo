@@ -1,18 +1,13 @@
-package com.nsh.users.controller;
-
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
+package com.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class IndexController {
-	@RequestMapping(value = "/admin-manage/index", method = RequestMethod.GET)
-	public String showIndex() {
+    /*@RequestMapping(value = "/admin-manage/index", method = RequestMethod.GET)
+    public String showIndex() {
 		return null;
 	}
 
@@ -33,5 +28,10 @@ public class IndexController {
 		model.addAttribute("serverTime", formattedDate);
 
 		return "home";
-	}
+	}*/
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index() {
+        return "index";
+    }
 }
