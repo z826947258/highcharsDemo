@@ -1,2 +1,2 @@
-# highcharsDemo
-a highchars demo
+# highchartsDemo
+a highcharts demo
